@@ -1,6 +1,7 @@
-import { Check, ShoppingCart, Sparkles, Gift, Flame, Star } from "lucide-react";
+import { Check, ShoppingCart, Gift, Flame, Star } from "lucide-react";
 import { Combo } from "@/types";
 import { formatPrice, generateWhatsAppLink } from "@/constants";
+import CountdownTimer from "./CountdownTimer";
 
 interface ComboSectionProps {
   combo: Combo;
@@ -81,6 +82,9 @@ const ComboSection = ({ combo }: ComboSectionProps) => {
                 </li>
               ))}
             </ul>
+
+            {/* Countdown Timer */}
+            <CountdownTimer />
 
             {/* Price Block - More Dramatic */}
             <div className="bg-white/10 backdrop-blur-md rounded-2xl md:rounded-3xl p-4 md:p-6 mb-4 md:mb-6 border border-white/20 animate-fade-in">
