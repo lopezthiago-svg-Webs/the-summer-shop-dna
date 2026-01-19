@@ -49,7 +49,7 @@ export const COMBO: Combo = {
   description: "¡Todo lo que necesitás para disfrutar el verano al máximo!",
   price: 70000,
   originalPrice: 85000,
-  image: "https://images.unsplash.com/photo-1571068316344-75bc76f77890?w=800",
+  image: "https://lh3.googleusercontent.com/d/1f5vLTGc46ShwldZ9bkDDI75oIjkHipVo=w1200?authuser=0",
   items: [
     "Conservadora 42L",
     "Conservadora 22L", 
