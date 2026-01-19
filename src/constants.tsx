@@ -11,7 +11,9 @@ export const PRODUCTS: Product[] = [
     price: 23999,
     originalPrice: 28900,
     images: [
-      "https://drive.google.com/thumbnail?id=14C-VlU95AU_xTwib-fWPUvAjGL2iJR1G&sz=w1200"
+      "https://drive.google.com/thumbnail?id=14C-VlU95AU_xTwib-fWPUvAjGL2iJR1G&sz=w1200",
+      "https://drive.google.com/thumbnail?id=14W_KeDMBcy7JsLR28QVGrEvr-NLgUSTX&sz=w1200",
+      "https://drive.google.com/thumbnail?id=1LtPxl1cYxSuNP6qnj7QNLCayInG3qE90&sz=w1200"
     ],
     badge: "OFERTA 🔥",
     category: "Playa / Camping"
@@ -49,7 +51,7 @@ export const PRODUCTS: Product[] = [
     price: 12500,
     originalPrice: 12500,
     images: [
-      "https://drive.google.com/thumbnail?id=16_M6yU-V3lP2KqjZ2_m2_M-Z-Z-Z-Z&sz=w1200"
+      "https://drive.google.com/thumbnail?id=1nGO7qe4eusTeoGi6Gqb1R3fZleL_e_JS&sz=w1200"
     ],
     category: "Playa / Camping"
   },
@@ -61,7 +63,7 @@ export const PRODUCTS: Product[] = [
     price: 8900,
     originalPrice: 8900,
     images: [
-      "https://drive.google.com/thumbnail?id=17_M6yU-V3lP2KqjZ2_m2_M-Z-Z-Z-Z&sz=w1200"
+      "https://drive.google.com/thumbnail?id=1BStZ4spTh5MgtQTZ1Mki8rqpWy7CEOGM&sz=w1200"
     ],
     category: "Playa / Camping"
   },
@@ -73,7 +75,7 @@ export const PRODUCTS: Product[] = [
     price: 14500,
     originalPrice: 18000,
     images: [
-      "https://drive.google.com/thumbnail?id=18_M6yU-V3lP2KqjZ2_m2_M-Z-Z-Z-Z&sz=w1200"
+      "https://drive.google.com/thumbnail?id=1SaLF4GFnw3AcmuyZMV0SEVjeEOxlsbQC&sz=w1200"
     ],
     badge: "OFERTA 🔥",
     category: "Jardín"
@@ -86,7 +88,7 @@ export const PRODUCTS: Product[] = [
     price: 18900,
     originalPrice: 18900,
     images: [
-      "https://drive.google.com/thumbnail?id=19_M6yU-V3lP2KqjZ2_m2_M-Z-Z-Z-Z&sz=w1200"
+      "https://drive.google.com/thumbnail?id=1xCRDTUaU5wT2WyhOCDdodlE0FmQohUcW&sz=w1200"
     ],
     category: "Bazar / Hogar"
   },
@@ -98,10 +100,22 @@ export const PRODUCTS: Product[] = [
     price: 32000,
     originalPrice: 45000,
     images: [
-      "https://drive.google.com/thumbnail?id=20_M6yU-V3lP2KqjZ2_m2_M-Z-Z-Z-Z&sz=w1200"
+      "https://drive.google.com/thumbnail?id=15iCJ17RUttXST3KzJcR4q8JMWSJkeI-x&sz=w1200"
     ],
     badge: "SUPER OFERTA 🔥",
     category: "Herramientas"
+  },
+  {
+    id: "9",
+    name: "Jarra Veraniega",
+    description: "Ideal para bebidas frescas",
+    longDescription: "Jarra veraniega perfecta para servir jugos, limonadas y bebidas refrescantes. Diseño moderno y práctico para tus reuniones de verano.",
+    price: 9900,
+    originalPrice: 9900,
+    images: [
+      "https://drive.google.com/thumbnail?id=1mcgHEbl2OxCQeMHmGVYwrfLOtsCBQNlZ&sz=w1200"
+    ],
+    category: "Bazar / Hogar"
   }
 ];
 
