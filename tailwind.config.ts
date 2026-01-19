@@ -104,8 +104,8 @@ export default {
           to: { transform: "translateY(0)", opacity: "1" },
         },
         "fade-in": {
-          from: { opacity: "0" },
-          to: { opacity: "1" },
+          from: { opacity: "0", transform: "translateY(20px)" },
+          to: { opacity: "1", transform: "translateY(0)" },
         },
         "scale-in": {
           from: { transform: "scale(0.95)", opacity: "0" },
@@ -113,17 +113,43 @@ export default {
         },
         "bounce-gentle": {
           "0%, 100%": { transform: "translateY(0)" },
-          "50%": { transform: "translateY(-5px)" },
+          "50%": { transform: "translateY(-8px)" },
+        },
+        "shimmer": {
+          "0%": { backgroundPosition: "-200% 0" },
+          "100%": { backgroundPosition: "200% 0" },
+        },
+        "float": {
+          "0%, 100%": { transform: "translateY(0) rotate(0deg)" },
+          "50%": { transform: "translateY(-10px) rotate(2deg)" },
+        },
+        "pulse-scale": {
+          "0%, 100%": { transform: "scale(1)" },
+          "50%": { transform: "scale(1.05)" },
+        },
+        "glow": {
+          "0%, 100%": { boxShadow: "0 0 20px hsl(25 95% 53% / 0.4)" },
+          "50%": { boxShadow: "0 0 40px hsl(25 95% 53% / 0.8), 0 0 60px hsl(45 100% 60% / 0.4)" },
+        },
+        "shake": {
+          "0%, 100%": { transform: "translateX(0)" },
+          "25%": { transform: "translateX(-3px) rotate(-1deg)" },
+          "75%": { transform: "translateX(3px) rotate(1deg)" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "slide-up": "slide-up 0.4s ease-out",
+        "slide-up": "slide-up 0.5s ease-out",
         "slide-down": "slide-down 0.4s ease-out",
-        "fade-in": "fade-in 0.3s ease-out",
+        "fade-in": "fade-in 0.5s ease-out forwards",
         "scale-in": "scale-in 0.3s ease-out",
         "bounce-gentle": "bounce-gentle 2s ease-in-out infinite",
+        "shimmer": "shimmer 2s linear infinite",
+        "float": "float 3s ease-in-out infinite",
+        "pulse-scale": "pulse-scale 2s ease-in-out infinite",
+        "glow": "glow 2s ease-in-out infinite",
+        "shake": "shake 0.5s ease-in-out",
       },
     },
   },
