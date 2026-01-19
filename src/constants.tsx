@@ -11,7 +11,7 @@ export const PRODUCTS: Product[] = [
     price: 23999,
     originalPrice: 28900,
     images: [
-      "https://images.unsplash.com/photo-1571068316344-75bc76f77890?w=400"
+      "https://drive.google.com/thumbnail?id=14C-VlU95AU_xTwib-fWPUvAjGL2iJR1G&sz=w1200"
     ],
     badge: "OFERTA 🔥",
     category: "Playa / Camping"
@@ -24,7 +24,7 @@ export const PRODUCTS: Product[] = [
     price: 19900,
     originalPrice: 19900,
     images: [
-      "https://images.unsplash.com/photo-1571068316344-75bc76f77890?w=400"
+      "https://drive.google.com/thumbnail?id=1oowtWZMd74TUmDz3Sh-zoEhB3HkmgU-Y&sz=w1200"
     ],
     category: "Playa / Camping"
   },
@@ -36,7 +36,7 @@ export const PRODUCTS: Product[] = [
     price: 15900,
     originalPrice: 19500,
     images: [
-      "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400"
+      "https://drive.google.com/thumbnail?id=1a5pbjDVRDeKnuufAPk7H3OqGuX-BUoOa&sz=w1200"
     ],
     badge: "OFERTA 🔥",
     category: "Bazar / Hogar"
@@ -49,7 +49,7 @@ export const COMBO: Combo = {
   description: "¡Todo lo que necesitás para disfrutar el verano al máximo!",
   price: 70000,
   originalPrice: 85000,
-  image: "https://lh3.googleusercontent.com/d/1f5vLTGc46ShwldZ9bkDDI75oIjkHipVo=w1200?authuser=0",
+  image: "https://drive.google.com/thumbnail?id=1f5vLTGc46ShwldZ9bkDDI75oIjkHipVo&sz=w1200",
   items: [
     "Conservadora 42L",
     "Conservadora 22L", 
