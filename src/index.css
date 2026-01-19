@@ -163,7 +163,7 @@
   }
 
   .card-product {
-    @apply bg-card rounded-3xl overflow-hidden shadow-summer transition-all duration-300 hover:shadow-summer-hover hover:-translate-y-1;
+    @apply bg-card rounded-3xl overflow-hidden shadow-summer transition-all duration-300 hover:shadow-summer-hover hover:-translate-y-2;
   }
 
   .btn-buy {
@@ -181,6 +181,59 @@
 
   .banner-shipping {
     @apply bg-gradient-summer text-white font-outfit font-semibold text-center py-2 px-4;
+  }
+
+  /* Combo special styles */
+  .combo-card {
+    @apply relative overflow-hidden;
+    background: linear-gradient(135deg, hsl(20 15% 8%) 0%, hsl(25 20% 12%) 50%, hsl(20 15% 8%) 100%);
+  }
+
+  .combo-glow {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle, hsl(25 95% 53% / 0.4) 0%, transparent 70%);
+    filter: blur(40px);
+    animation: float 4s ease-in-out infinite;
+  }
+
+  .shimmer-text {
+    background: linear-gradient(
+      90deg,
+      hsl(25 95% 53%) 0%,
+      hsl(45 100% 60%) 25%,
+      hsl(25 95% 53%) 50%,
+      hsl(45 100% 60%) 75%,
+      hsl(25 95% 53%) 100%
+    );
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 3s linear infinite;
+  }
+
+  .image-shine {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .image-shine::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.2),
+      transparent
+    );
+    animation: shimmer 3s ease-in-out infinite;
   }
 }
 
@@ -209,5 +262,23 @@
 
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
+  }
+
+  /* Stagger children animation */
+  .stagger-children > * {
+    opacity: 0;
+    animation: fade-in 0.5s ease-out forwards;
+  }
+
+  .stagger-children > *:nth-child(1) { animation-delay: 0ms; }
+  .stagger-children > *:nth-child(2) { animation-delay: 100ms; }
+  .stagger-children > *:nth-child(3) { animation-delay: 200ms; }
+  .stagger-children > *:nth-child(4) { animation-delay: 300ms; }
+  .stagger-children > *:nth-child(5) { animation-delay: 400ms; }
+  .stagger-children > *:nth-child(6) { animation-delay: 500ms; }
+
+  @keyframes fade-in {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
   }
 }
