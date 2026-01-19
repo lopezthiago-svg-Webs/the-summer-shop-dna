@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import ShippingBanner from "@/components/ShippingBanner";
 import ProductCard from "@/components/ProductCard";
 import ComboSection from "@/components/ComboSection";
+import TestimonialsCarousel from "@/components/TestimonialsCarousel";
 import DetailModal from "@/components/DetailModal";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
@@ -109,8 +110,11 @@ const Index = () => {
           </div>
         </section>
 
+        {/* Testimonials Carousel */}
+        <TestimonialsCarousel />
+
         {/* Trust Banner */}
-        <section className="bg-muted py-8 md:py-12 mt-6 md:mt-8">
+        <section className="bg-muted py-8 md:py-12">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 text-center">
               {[
