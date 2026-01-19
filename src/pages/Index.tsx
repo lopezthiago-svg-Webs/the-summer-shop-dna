@@ -108,8 +108,8 @@ const Index = () => {
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
               {[
-                { emoji: "🚚", title: "Envío Gratis", desc: "+$25.000" },
-                { emoji: "💳", title: "3 Cuotas", desc: "Sin interés" },
+                { emoji: "🚚", title: "Envío Gratis", desc: "San Pedro y San Nicolás" },
+                { emoji: "💵", title: "Pago Único", desc: "Sin complicaciones" },
                 { emoji: "🔒", title: "Compra Segura", desc: "100% protegida" },
                 { emoji: "💬", title: "Atención", desc: "Por WhatsApp" },
               ].map((item, idx) => (
