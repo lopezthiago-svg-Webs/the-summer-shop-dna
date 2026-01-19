@@ -1,104 +1,64 @@
 import { Product, Combo } from "./types";
 
-export const WHATSAPP_NUMBER = "5491112345678";
+export const WHATSAPP_NUMBER = "5491139524038";
 
 export const PRODUCTS: Product[] = [
   {
     id: "1",
-    name: "Bikini Tropical Paradise",
-    description: "Set completo con diseño exclusivo",
-    longDescription: "Bikini de dos piezas con estampado tropical único. Tela de secado rápido con protección UV. Incluye top con tirantes ajustables y bottom de tiro medio. Perfecto para playa o pileta.",
-    price: 12990,
-    originalPrice: 24990,
+    name: "Conservadora 42L",
+    description: "Gran capacidad para playa y camping",
+    longDescription: "Conservadora de 42 litros con aislamiento térmico premium. Mantiene tus bebidas y alimentos fríos por más tiempo. Ideal para salidas familiares, camping o días de playa. Incluye asa resistente y tapón de drenaje.",
+    price: 23999,
+    originalPrice: 28900,
     images: [
-      "https://images.unsplash.com/photo-1570976447640-ac859083963f?w=400",
-      "https://images.unsplash.com/photo-1594744803329-e58b31de8bf5?w=400"
+      "https://images.unsplash.com/photo-1571068316344-75bc76f77890?w=400"
     ],
     badge: "OFERTA 🔥",
-    category: "Bikinis"
+    category: "Playa / Camping"
   },
   {
     id: "2",
-    name: "Malla Enteriza Elegance",
-    description: "Diseño sofisticado y moderno",
-    longDescription: "Malla enteriza con escote en V y espalda descubierta. Moldea la figura y realza tu silueta. Ideal para quienes buscan comodidad sin perder estilo.",
-    price: 15990,
-    originalPrice: 29990,
+    name: "Conservadora 22L",
+    description: "Perfecta para picnic y salidas",
+    longDescription: "Conservadora compacta de 22 litros, ideal para camping y picnic. Fácil de transportar con su asa ergonómica. Mantiene la temperatura por horas. Perfecta para parejas o salidas cortas.",
+    price: 19900,
+    originalPrice: 19900,
     images: [
-      "https://images.unsplash.com/photo-1582639510494-c80b5de9f148?w=400",
-      "https://images.unsplash.com/photo-1590739225287-bd31519780c3?w=400"
+      "https://images.unsplash.com/photo-1571068316344-75bc76f77890?w=400"
     ],
-    badge: "TOP VENTAS",
-    category: "Mallas"
+    category: "Playa / Camping"
   },
   {
     id: "3",
-    name: "Shorts Playeros Wave",
-    description: "Frescos y cómodos para el verano",
-    longDescription: "Shorts de baño con estampado de olas. Secado ultra rápido, bolsillos laterales con cierre y cintura elástica con cordón ajustable.",
-    price: 8990,
-    originalPrice: 14990,
+    name: "Pava Mate Eléctrica",
+    description: "Acero inoxidable premium",
+    longDescription: "Pava eléctrica de acero inoxidable con corte automático. Perfecta para el mate, con pico vertedor especial que no gotea. Capacidad ideal y calentamiento rápido. Base 360° para mayor comodidad.",
+    price: 15900,
+    originalPrice: 19500,
     images: [
-      "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400",
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400"
-    ],
-    category: "Shorts"
-  },
-  {
-    id: "4",
-    name: "Pareo Sunset Dreams",
-    description: "Accesorio versátil y elegante",
-    longDescription: "Pareo de gasa liviana con degradé de colores atardecer. Se puede usar como falda, vestido o top. Talle único que se adapta a todos los cuerpos.",
-    price: 6990,
-    originalPrice: 12990,
-    images: [
-      "https://images.unsplash.com/photo-1520454974749-611b7248ffdb?w=400"
-    ],
-    badge: "NUEVO",
-    category: "Accesorios"
-  },
-  {
-    id: "5",
-    name: "Bikini Neon Vibes",
-    description: "Colores intensos que brillan",
-    longDescription: "Bikini en tonos neón que destacan bajo el sol. Diseño brasileño con cobertura media. Incluye top triangular y bottom con tiras laterales ajustables.",
-    price: 11990,
-    originalPrice: 21990,
-    images: [
-      "https://images.unsplash.com/photo-1541979144953-c8a11a6cdc38?w=400",
-      "https://images.unsplash.com/photo-1519505907962-0a6cb0167c73?w=400"
+      "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400"
     ],
     badge: "OFERTA 🔥",
-    category: "Bikinis"
-  },
-  {
-    id: "6",
-    name: "Ojotas Premium Comfort",
-    description: "Máxima comodidad para tus pies",
-    longDescription: "Ojotas con plantilla anatómica de memory foam. Suela antideslizante perfecta para pileta. Diseño minimalista que combina con todo.",
-    price: 4990,
-    originalPrice: 8990,
-    images: [
-      "https://images.unsplash.com/photo-1603487742131-4160ec999306?w=400"
-    ],
-    category: "Calzado"
+    category: "Bazar / Hogar"
   }
 ];
 
 export const COMBO: Combo = {
   id: "combo-1",
-  name: "COMBO VERANO TOTAL",
-  description: "Todo lo que necesitás para arrasar en la playa",
-  price: 29990,
-  originalPrice: 52970,
-  image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800",
+  name: "SUPER COMBO VERANO",
+  description: "¡Todo lo que necesitás para disfrutar el verano al máximo!",
+  price: 70000,
+  originalPrice: 85000,
+  image: "https://images.unsplash.com/photo-1571068316344-75bc76f77890?w=800",
   items: [
-    "Bikini Tropical Paradise",
-    "Pareo Sunset Dreams",
-    "Ojotas Premium Comfort",
-    "Bolso de playa de regalo"
+    "Conservadora 42L",
+    "Conservadora 22L", 
+    "Pava Mate Eléctrica",
+    "Termolar 2.5L",
+    "Botellas Térmicas 2L y 1L",
+    "Botellita Sport (¡REGALO!)"
   ],
-  savings: 22980
+  savings: 15000
 };
 
 export const formatPrice = (price: number): string => {
