@@ -6,6 +6,7 @@ import ProductCard from "@/components/ProductCard";
 import ComboSection from "@/components/ComboSection";
 import DetailModal from "@/components/DetailModal";
 import Footer from "@/components/Footer";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import { Product } from "@/types";
 import { PRODUCTS, COMBO } from "@/constants";
 
@@ -66,7 +67,7 @@ const Index = () => {
           <div className="text-center max-w-3xl mx-auto animate-fade-in">
             <div className="inline-flex items-center gap-2 bg-secondary/50 text-secondary-foreground px-3 py-1.5 md:px-4 md:py-2 rounded-full font-outfit font-semibold text-xs md:text-sm mb-4 md:mb-6 animate-bounce-gentle">
               <Sun className="w-3 h-3 md:w-4 md:h-4" />
-              Verano 2025 ☀️
+              Verano 2026 ☀️
             </div>
             <h1 className="font-outfit font-extrabold text-3xl md:text-6xl lg:text-7xl text-foreground mb-4 md:mb-6 leading-tight">
               Lo mejor para tu
@@ -80,7 +81,9 @@ const Index = () => {
         </section>
 
         {/* Combo Section - Sales Anchor */}
-        <ComboSection combo={COMBO} />
+        <div id="ofertas">
+          <ComboSection combo={COMBO} />
+        </div>
 
         {/* Products Grid */}
         <section className="container mx-auto px-4 py-8 md:py-12">
@@ -94,7 +97,7 @@ const Index = () => {
             </span>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
             {PRODUCTS.map((product, index) => (
               <ProductCard
                 key={product.id}
@@ -133,6 +136,9 @@ const Index = () => {
 
       {/* Footer */}
       <Footer />
+
+      {/* Floating WhatsApp Button */}
+      <FloatingWhatsApp />
 
       {/* Detail Modal */}
       <DetailModal
