@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
-import { Sun, Rocket, MessageCircle } from "lucide-react";
-import { WHATSAPP_NUMBER } from "@/constants";
+import { Sun, Rocket, Home, Tag } from "lucide-react";
 
 interface HeaderProps {
   isAdminMode: boolean;
@@ -32,6 +31,17 @@ const Header = ({ isAdminMode, onAdminToggle, bannerVisible = false }: HeaderPro
     setTimeout(() => setClickCount(0), 2000);
   };
 
+  const scrollToSection = (sectionId: string) => {
+    if (sectionId === "inicio") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
+
   return (
     <header
       className={`fixed left-0 right-0 z-40 transition-all duration-300 bg-background border-b border-border shadow-sm ${
@@ -53,8 +63,23 @@ const Header = ({ isAdminMode, onAdminToggle, bannerVisible = false }: HeaderPro
             </span>
           </button>
 
-          {/* Nav Actions */}
-          <div className="flex items-center gap-2">
+          {/* Navigation Links */}
+          <nav className="flex items-center gap-1 md:gap-2">
+            <button
+              onClick={() => scrollToSection("inicio")}
+              className="flex items-center gap-1.5 px-3 py-2 rounded-xl text-sm font-medium text-foreground hover:bg-muted transition-colors"
+            >
+              <Home className="w-4 h-4" />
+              <span className="hidden sm:inline">Inicio</span>
+            </button>
+            <button
+              onClick={() => scrollToSection("ofertas")}
+              className="flex items-center gap-1.5 px-3 py-2 rounded-xl text-sm font-medium text-foreground hover:bg-muted transition-colors"
+            >
+              <Tag className="w-4 h-4" />
+              <span className="hidden sm:inline">Ofertas</span>
+            </button>
+            
             {isAdminMode && (
               <button
                 onClick={() => window.open("https://lovable.dev", "_blank")}
@@ -64,17 +89,7 @@ const Header = ({ isAdminMode, onAdminToggle, bannerVisible = false }: HeaderPro
                 <span className="hidden md:inline">Deploy</span>
               </button>
             )}
-            {/* WhatsApp Button - Mobile CTA */}
-            <a
-              href={`https://wa.me/${WHATSAPP_NUMBER}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 bg-success text-success-foreground px-3 py-2 rounded-2xl font-outfit font-bold text-sm hover:scale-105 transition-transform shadow-md"
-            >
-              <MessageCircle className="w-4 h-4" />
-              <span className="hidden sm:inline">WhatsApp</span>
-            </a>
-          </div>
+          </nav>
         </div>
       </div>
     </header>

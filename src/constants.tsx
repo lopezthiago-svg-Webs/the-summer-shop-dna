@@ -40,6 +40,68 @@ export const PRODUCTS: Product[] = [
     ],
     badge: "OFERTA 🔥",
     category: "Bazar / Hogar"
+  },
+  {
+    id: "4",
+    name: "Botella Térmica 2L",
+    description: "Mantiene frío o caliente por horas",
+    longDescription: "Botella térmica de 2 litros con doble pared de acero inoxidable. Mantiene bebidas frías hasta 24 horas o calientes hasta 12 horas. Tapa hermética y asa de transporte.",
+    price: 12500,
+    originalPrice: 12500,
+    images: [
+      "https://drive.google.com/thumbnail?id=16_M6yU-V3lP2KqjZ2_m2_M-Z-Z-Z-Z&sz=w1200"
+    ],
+    category: "Playa / Camping"
+  },
+  {
+    id: "5",
+    name: "Botella Térmica 1L",
+    description: "Compacta y práctica",
+    longDescription: "Botella térmica de 1 litro, perfecta para llevar a todos lados. Acero inoxidable de alta calidad. Ideal para el día a día, gimnasio o trabajo.",
+    price: 8900,
+    originalPrice: 8900,
+    images: [
+      "https://drive.google.com/thumbnail?id=17_M6yU-V3lP2KqjZ2_m2_M-Z-Z-Z-Z&sz=w1200"
+    ],
+    category: "Playa / Camping"
+  },
+  {
+    id: "6",
+    name: "Manguera de Jardín",
+    description: "Resistente y flexible",
+    longDescription: "Manguera de jardín de alta resistencia, flexible y duradera. Ideal para riego y limpieza. No se enreda y soporta alta presión de agua.",
+    price: 14500,
+    originalPrice: 18000,
+    images: [
+      "https://drive.google.com/thumbnail?id=18_M6yU-V3lP2KqjZ2_m2_M-Z-Z-Z-Z&sz=w1200"
+    ],
+    badge: "OFERTA 🔥",
+    category: "Jardín"
+  },
+  {
+    id: "7",
+    name: "Dispenser de Cristal",
+    description: "Elegante y funcional",
+    longDescription: "Dispenser de cristal con capacidad para bebidas. Perfecto para fiestas, reuniones o decoración. Incluye grifo de acero inoxidable.",
+    price: 18900,
+    originalPrice: 18900,
+    images: [
+      "https://drive.google.com/thumbnail?id=19_M6yU-V3lP2KqjZ2_m2_M-Z-Z-Z-Z&sz=w1200"
+    ],
+    category: "Bazar / Hogar"
+  },
+  {
+    id: "8",
+    name: "Caja de Herramientas",
+    description: "Organización profesional",
+    longDescription: "Caja de herramientas resistente con múltiples compartimentos. Ideal para organizar todas tus herramientas. Material de alta resistencia y cierre seguro.",
+    price: 32000,
+    originalPrice: 45000,
+    images: [
+      "https://drive.google.com/thumbnail?id=20_M6yU-V3lP2KqjZ2_m2_M-Z-Z-Z-Z&sz=w1200"
+    ],
+    badge: "SUPER OFERTA 🔥",
+    category: "Herramientas"
   }
 ];
 
