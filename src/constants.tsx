@@ -32,7 +32,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: "3",
-    name: "Pava Mate Eléctrica",
+    name: "Pava Mate",
     description: "Acero inoxidable premium",
     longDescription: "Pava eléctrica de acero inoxidable con corte automático. Perfecta para el mate, con pico vertedor especial que no gotea. Capacidad ideal y calentamiento rápido. Base 360° para mayor comodidad.",
     price: 15900,
@@ -45,11 +45,11 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: "4",
-    name: "Botella Térmica 2L",
-    description: "Mantiene frío o caliente por horas",
-    longDescription: "Botella térmica de 2 litros con doble pared de acero inoxidable. Mantiene bebidas frías hasta 24 horas o calientes hasta 12 horas. Tapa hermética y asa de transporte.",
-    price: 12500,
-    originalPrice: 12500,
+    name: "Botella 2L Transparente",
+    description: "Práctica y resistente",
+    longDescription: "Botella de 2 litros transparente, perfecta para llevar agua o jugos. Material resistente y liviano. Ideal para el día a día, gimnasio o trabajo.",
+    price: 3500,
+    originalPrice: 3500,
     images: [
       "https://drive.google.com/thumbnail?id=1nGO7qe4eusTeoGi6Gqb1R3fZleL_e_JS&sz=w1200"
     ],
@@ -57,11 +57,11 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: "5",
-    name: "Botella Térmica 1L",
+    name: "Botella 1L Transparente",
     description: "Compacta y práctica",
-    longDescription: "Botella térmica de 1 litro, perfecta para llevar a todos lados. Acero inoxidable de alta calidad. Ideal para el día a día, gimnasio o trabajo.",
-    price: 8900,
-    originalPrice: 8900,
+    longDescription: "Botella de 1 litro transparente, perfecta para llevar a todos lados. Material resistente y liviano. Ideal para el día a día.",
+    price: 2500,
+    originalPrice: 2500,
     images: [
       "https://drive.google.com/thumbnail?id=1BStZ4spTh5MgtQTZ1Mki8rqpWy7CEOGM&sz=w1200"
     ],
@@ -69,11 +69,11 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: "6",
-    name: "Manguera de Jardín",
+    name: "Manguera",
     description: "Resistente y flexible",
     longDescription: "Manguera de jardín de alta resistencia, flexible y duradera. Ideal para riego y limpieza. No se enreda y soporta alta presión de agua.",
-    price: 14500,
-    originalPrice: 18000,
+    price: 8900,
+    originalPrice: 12000,
     images: [
       "https://drive.google.com/thumbnail?id=1SaLF4GFnw3AcmuyZMV0SEVjeEOxlsbQC&sz=w1200"
     ],
@@ -82,28 +82,29 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: "7",
-    name: "Dispenser de Cristal",
+    name: "Dispenser de Bebidas",
     description: "Elegante y funcional",
     longDescription: "Dispenser de cristal con capacidad para bebidas. Perfecto para fiestas, reuniones o decoración. Incluye grifo de acero inoxidable.",
-    price: 18900,
+    price: 14900,
     originalPrice: 18900,
     images: [
       "https://drive.google.com/thumbnail?id=1xCRDTUaU5wT2WyhOCDdodlE0FmQohUcW&sz=w1200"
     ],
+    badge: "OFERTA 🔥",
     category: "Bazar / Hogar"
   },
   {
     id: "8",
-    name: "Caja de Herramientas",
+    name: "Caja de Pesca",
     description: "Organización profesional",
-    longDescription: "Caja de herramientas resistente con múltiples compartimentos. Ideal para organizar todas tus herramientas. Material de alta resistencia y cierre seguro.",
-    price: 32000,
-    originalPrice: 45000,
+    longDescription: "Caja de pesca resistente con múltiples compartimentos. Ideal para organizar todos tus accesorios. Material de alta resistencia y cierre seguro.",
+    price: 9900,
+    originalPrice: 12000,
     images: [
       "https://drive.google.com/thumbnail?id=15iCJ17RUttXST3KzJcR4q8JMWSJkeI-x&sz=w1200"
     ],
-    badge: "SUPER OFERTA 🔥",
-    category: "Herramientas"
+    badge: "OFERTA 🔥",
+    category: "Pesca"
   },
   {
     id: "9",
@@ -114,6 +115,43 @@ export const PRODUCTS: Product[] = [
     originalPrice: 9900,
     images: [
       "https://drive.google.com/thumbnail?id=1mcgHEbl2OxCQeMHmGVYwrfLOtsCBQNlZ&sz=w1200"
+    ],
+    category: "Bazar / Hogar"
+  },
+  {
+    id: "10",
+    name: "Termolar 2L",
+    description: "Mantiene temperatura por horas",
+    longDescription: "Termolar de 2 litros con doble pared. Mantiene bebidas frías o calientes por más tiempo. Ideal para mate, café o bebidas frías.",
+    price: 6900,
+    originalPrice: 8500,
+    images: [
+      "https://drive.google.com/thumbnail?id=1nGO7qe4eusTeoGi6Gqb1R3fZleL_e_JS&sz=w1200"
+    ],
+    badge: "OFERTA 🔥",
+    category: "Playa / Camping"
+  },
+  {
+    id: "11",
+    name: "Botellita de Agua",
+    description: "Perfecta para llevar",
+    longDescription: "Botellita de agua compacta, ideal para niños o para llevar en la cartera. Liviana y práctica para el día a día.",
+    price: 1500,
+    originalPrice: 1500,
+    images: [
+      "https://drive.google.com/thumbnail?id=1BStZ4spTh5MgtQTZ1Mki8rqpWy7CEOGM&sz=w1200"
+    ],
+    category: "Playa / Camping"
+  },
+  {
+    id: "12",
+    name: "Jabonera",
+    description: "Práctica y decorativa",
+    longDescription: "Jabonera de diseño moderno, perfecta para el baño o la cocina. Material resistente y fácil de limpiar.",
+    price: 4500,
+    originalPrice: 4500,
+    images: [
+      "https://drive.google.com/thumbnail?id=1xCRDTUaU5wT2WyhOCDdodlE0FmQohUcW&sz=w1200"
     ],
     category: "Bazar / Hogar"
   }
