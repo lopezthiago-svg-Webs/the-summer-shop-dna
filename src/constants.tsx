@@ -107,18 +107,6 @@ export const PRODUCTS: Product[] = [
     category: "Pesca"
   },
   {
-    id: "9",
-    name: "Jarra Veraniega",
-    description: "Ideal para bebidas frescas",
-    longDescription: "Jarra veraniega perfecta para servir jugos, limonadas y bebidas refrescantes. Diseño moderno y práctico para tus reuniones de verano.",
-    price: 9900,
-    originalPrice: 9900,
-    images: [
-      "https://drive.google.com/thumbnail?id=1mcgHEbl2OxCQeMHmGVYwrfLOtsCBQNlZ&sz=w1200"
-    ],
-    category: "Bazar / Hogar"
-  },
-  {
     id: "10",
     name: "Termolar 2L",
     description: "Mantiene temperatura por horas",
@@ -151,7 +139,7 @@ export const PRODUCTS: Product[] = [
     price: 4500,
     originalPrice: 4500,
     images: [
-      "https://drive.google.com/thumbnail?id=1xCRDTUaU5wT2WyhOCDdodlE0FmQohUcW&sz=w1200"
+      "https://drive.google.com/thumbnail?id=14uHUc0r2N97ny0aUcTaBAwCErPnDmMqM&sz=w1200"
     ],
     category: "Bazar / Hogar"
   }
