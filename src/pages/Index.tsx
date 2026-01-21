@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { Sparkles, Sun } from "lucide-react";
 import Header from "@/components/Header";
 import ShippingBanner from "@/components/ShippingBanner";
@@ -8,6 +8,7 @@ import TestimonialsCarousel from "@/components/TestimonialsCarousel";
 import DetailModal from "@/components/DetailModal";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import CategoryFilter from "@/components/CategoryFilter";
 import { Product } from "@/types";
 import { PRODUCTS, COMBO } from "@/constants";
 
@@ -18,6 +19,19 @@ const Index = () => {
   });
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+
+  // Get unique categories
+  const categories = useMemo(() => {
+    const cats = [...new Set(PRODUCTS.map(p => p.category))];
+    return cats.filter(Boolean) as string[];
+  }, []);
+
+  // Filter products by category
+  const filteredProducts = useMemo(() => {
+    if (!selectedCategory) return PRODUCTS;
+    return PRODUCTS.filter(p => p.category === selectedCategory);
+  }, [selectedCategory]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -88,18 +102,25 @@ const Index = () => {
 
         {/* Products Grid */}
         <section className="container mx-auto px-4 py-8 md:py-12">
-          <div className="flex items-center justify-between mb-6 md:mb-8">
+          <div className="flex items-center justify-between mb-4 md:mb-6">
             <h2 className="font-outfit font-bold text-xl md:text-3xl text-foreground flex items-center gap-2">
               <Sparkles className="w-5 h-5 md:w-6 md:h-6 text-primary" />
               Productos
             </h2>
             <span className="text-muted-foreground text-xs md:text-sm bg-muted px-2 py-1 rounded-full">
-              {PRODUCTS.length} disponibles
+              {filteredProducts.length} disponibles
             </span>
           </div>
 
+          {/* Category Filter */}
+          <CategoryFilter
+            categories={categories}
+            selectedCategory={selectedCategory}
+            onSelectCategory={setSelectedCategory}
+          />
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
-            {PRODUCTS.map((product, index) => (
+            {filteredProducts.map((product, index) => (
               <ProductCard
                 key={product.id}
                 product={product}
