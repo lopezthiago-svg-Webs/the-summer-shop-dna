@@ -114,7 +114,7 @@ export const PRODUCTS: Product[] = [
     price: 6900,
     originalPrice: 8500,
     images: [
-      "https://drive.google.com/thumbnail?id=1nGO7qe4eusTeoGi6Gqb1R3fZleL_e_JS&sz=w1200"
+      "https://drive.google.com/thumbnail?id=1qdRl-vX4kswO4qLAevC6-5JXq1EY4zto&sz=w1200"
     ],
     badge: "OFERTA 🔥",
     category: "Playa / Camping"
