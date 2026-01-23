@@ -1,5 +1,6 @@
-import { Sun, Instagram, MessageCircle } from "lucide-react";
+import { Instagram, MessageCircle } from "lucide-react";
 import { WHATSAPP_NUMBER } from "@/constants";
+import logo from "@/assets/logo-oferton.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -10,12 +11,11 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-2xl bg-gradient-summer flex items-center justify-center">
-              <Sun className="w-6 h-6 text-primary-foreground" />
-            </div>
-            <span className="font-outfit font-extrabold text-xl text-gradient-summer">
-              TheSummerShop
-            </span>
+            <img 
+              src={logo} 
+              alt="El Ofertón" 
+              className="h-12 w-auto brightness-110"
+            />
           </div>
 
           {/* Social Links */}
@@ -41,7 +41,7 @@ const Footer = () => {
 
         <div className="border-t border-background/20 mt-8 pt-8 text-center">
           <p className="text-background/60 text-sm">
-            © {currentYear} TheSummerShop. Todos los derechos reservados.
+            © {currentYear} El Ofertón. Todos los derechos reservados.
           </p>
         </div>
       </div>
