@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo } from "react";
-import { Sparkles, Sun } from "lucide-react";
+import { Sparkles } from "lucide-react";
 import Header from "@/components/Header";
 import ShippingBanner from "@/components/ShippingBanner";
 import ProductCard from "@/components/ProductCard";
@@ -9,8 +9,10 @@ import DetailModal from "@/components/DetailModal";
 import Footer from "@/components/Footer";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import CategoryFilter from "@/components/CategoryFilter";
+import PriceSort, { SortOrder } from "@/components/PriceSort";
 import { Product } from "@/types";
 import { PRODUCTS, COMBO } from "@/constants";
+import logo from "@/assets/logo-oferton.png";
 
 const Index = () => {
   const [showBanner, setShowBanner] = useState(true);
@@ -20,6 +22,7 @@ const Index = () => {
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [sortOrder, setSortOrder] = useState<SortOrder>("none");
 
   // Get unique categories
   const categories = useMemo(() => {
@@ -27,11 +30,20 @@ const Index = () => {
     return cats.filter(Boolean) as string[];
   }, []);
 
-  // Filter products by category
+  // Filter and sort products
   const filteredProducts = useMemo(() => {
-    if (!selectedCategory) return PRODUCTS;
-    return PRODUCTS.filter(p => p.category === selectedCategory);
-  }, [selectedCategory]);
+    let result = selectedCategory 
+      ? PRODUCTS.filter(p => p.category === selectedCategory)
+      : [...PRODUCTS];
+    
+    if (sortOrder === "asc") {
+      result.sort((a, b) => a.price - b.price);
+    } else if (sortOrder === "desc") {
+      result.sort((a, b) => b.price - a.price);
+    }
+    
+    return result;
+  }, [selectedCategory, sortOrder]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -80,9 +92,13 @@ const Index = () => {
         {/* Hero Section - Compact for Mobile */}
         <section className="container mx-auto px-4 py-8 md:py-16">
           <div className="text-center max-w-3xl mx-auto animate-fade-in">
+            <img 
+              src={logo} 
+              alt="El Ofertón" 
+              className="w-48 md:w-64 mx-auto mb-4 md:mb-6"
+            />
             <div className="inline-flex items-center gap-2 bg-secondary/50 text-secondary-foreground px-3 py-1.5 md:px-4 md:py-2 rounded-full font-outfit font-semibold text-xs md:text-sm mb-4 md:mb-6 animate-bounce-gentle">
-              <Sun className="w-3 h-3 md:w-4 md:h-4" />
-              Verano 2026 ☀️
+              ☀️ Verano 2026 ☀️
             </div>
             <h1 className="font-outfit font-extrabold text-3xl md:text-6xl lg:text-7xl text-foreground mb-4 md:mb-6 leading-tight">
               Lo mejor para tu
@@ -112,12 +128,15 @@ const Index = () => {
             </span>
           </div>
 
-          {/* Category Filter */}
-          <CategoryFilter
-            categories={categories}
-            selectedCategory={selectedCategory}
-            onSelectCategory={setSelectedCategory}
-          />
+          {/* Filters */}
+          <div className="flex flex-wrap items-center gap-3 mb-6">
+            <CategoryFilter
+              categories={categories}
+              selectedCategory={selectedCategory}
+              onSelectCategory={setSelectedCategory}
+            />
+            <PriceSort sortOrder={sortOrder} onSortChange={setSortOrder} />
+          </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
             {filteredProducts.map((product, index) => (

@@ -17,13 +17,13 @@ const categoryIcons: Record<string, React.ReactNode> = {
 
 const CategoryFilter = ({ categories, selectedCategory, onSelectCategory }: CategoryFilterProps) => {
   return (
-    <div className="flex flex-wrap gap-2 md:gap-3 mb-6 md:mb-8">
+    <div className="flex flex-wrap gap-2">
       {/* All Button */}
       <button
         onClick={() => onSelectCategory(null)}
         className={cn(
           "inline-flex items-center gap-2 px-4 py-2 rounded-full font-outfit font-semibold text-sm transition-all duration-300",
-          "hover:scale-105 active:scale-95",
+          "hover:scale-[1.02] active:scale-[0.98]",
           "focus:outline-none focus:ring-2 focus:ring-primary/50",
           selectedCategory === null
             ? "bg-gradient-summer text-white shadow-lg shadow-primary/30"
@@ -31,7 +31,7 @@ const CategoryFilter = ({ categories, selectedCategory, onSelectCategory }: Cate
         )}
       >
         <LayoutGrid className="w-4 h-4" />
-        Todos
+        <span className="hidden sm:inline">Todos</span>
       </button>
       
       {/* Category Buttons */}
@@ -41,7 +41,7 @@ const CategoryFilter = ({ categories, selectedCategory, onSelectCategory }: Cate
           onClick={() => onSelectCategory(category)}
           className={cn(
             "inline-flex items-center gap-2 px-4 py-2 rounded-full font-outfit font-semibold text-sm transition-all duration-300",
-            "hover:scale-105 active:scale-95",
+            "hover:scale-[1.02] active:scale-[0.98]",
             "focus:outline-none focus:ring-2 focus:ring-primary/50",
             "animate-fade-in",
             selectedCategory === category
@@ -51,7 +51,7 @@ const CategoryFilter = ({ categories, selectedCategory, onSelectCategory }: Cate
           style={{ animationDelay: `${(index + 1) * 50}ms` }}
         >
           {categoryIcons[category] || <LayoutGrid className="w-4 h-4" />}
-          {category}
+          <span className="hidden sm:inline">{category}</span>
         </button>
       ))}
     </div>

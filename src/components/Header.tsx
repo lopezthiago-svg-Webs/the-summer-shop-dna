@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { Sun, Rocket, Home, Tag } from "lucide-react";
+import { Rocket, Home, Tag } from "lucide-react";
+import logo from "@/assets/logo-oferton.png";
 
 interface HeaderProps {
   isAdminMode: boolean;
@@ -53,14 +54,13 @@ const Header = ({ isAdminMode, onAdminToggle, bannerVisible = false }: HeaderPro
           {/* Logo */}
           <button
             onClick={handleLogoClick}
-            className="flex items-center gap-2 group focus:outline-none"
+            className="flex items-center gap-1 group focus:outline-none"
           >
-            <div className="w-9 h-9 md:w-10 md:h-10 rounded-2xl bg-gradient-summer flex items-center justify-center shadow-button group-hover:scale-110 transition-transform">
-              <Sun className="w-5 h-5 md:w-6 md:h-6 text-primary-foreground" />
-            </div>
-            <span className="font-outfit font-extrabold text-lg md:text-2xl text-gradient-summer">
-              TheSummerShop
-            </span>
+            <img 
+              src={logo} 
+              alt="El Ofertón" 
+              className="h-10 md:h-12 w-auto group-hover:scale-105 transition-transform"
+            />
           </button>
 
           {/* Navigation Links */}
